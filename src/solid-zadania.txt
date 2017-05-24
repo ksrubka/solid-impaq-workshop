@@ -1,0 +1,57 @@
+
+1 ****************  Single Responsibility  *****************
+
+Znajdź klasę z trzema odpowiedzialnościami.
+Spraw żeby została jej tylko jedna odpowiedzialność. 
+Resztę nazwij i wydeleguj.
+Spróbuj użyć do tego opcji refaktoryzacji w Twoim IDE.
+
+
+
+2 *****************  Dependency Inversion  ******************
+
+Znajdź klasę wyższego rzędu, która ma zależności do klas niższego rzędu.
+Spraw żeby klasa zależała od abstrakcji, która przybierze postać
+konkretnej implementacji. Stwórz drugą implementację wyświetlacza i użyj jej.
+(np. dodaj szlaczki na początku i na końcu)
+
+
+
+3 ********************  Open / Closed  **********************
+
+Dodaj kolejny typ pojazdu:
+* quad - musi posiadać id, prędkość maksymalną, 
+ oraz fakt posiadania (lub nieposiadania) pokrywy silnika
+Dodaj instancję quada do repozytorium i wyświetl przez serwis.
+Dodaj pojazdom metodę startEngine.
+
+
+
+4 *****************  Interface Segregation  *****************
+
+Dodaj kolejny typ pojazdu: 
+* rower - musi posiadać id, prędkość maksymalną, typ
+Jaka będzie jego implementacja metody startEngine?
+
+Spraw żeby żadna klasa nie dziedziczyła czegoś, czego nie potrzebuje.
+Dodaj instancję roweru do repozytorium i wyświetl przez serwis.
+
+
+
+5 *******************  Liskov Substitution  *****************
+
+Dodaj klasę GasStation, stwórz metodę fill, która będzie przyjmować 
+parametry: jakąkolwiek konkretną implementację pojazdu posiadającego silnik, 
+oraz ile litrów ma zatankować (int)
+
+Dodaj klasę ElectricCar, która posiada: id, maxSpeed, (int) chargeLevelKWH,
+(int) final maxChargeLevelKWH; 
+metodę charge(int kWh)
+
+Czy można naładować samochód elektryczny używając:
+metody GasStaion:
+void fill(Vehicle electricCar, int liters)?
+
+
+
+
